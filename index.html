@@ -1,108 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>حوائط العروض - تسجيل الدخول</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-    }
-    header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .btn {
-      width: 100%;
-      padding: 12px;
-      background: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .offers {
-      display: none;
-    }
-    .offer {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      background: #fff;
-    }
-    .points {
-      color: #e67e22;
-      font-weight: bold;
-    }
-  </style>
+  <title>حوائط العروض</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>حوائط العروض المجانية</h1>
+  </header>
 
-<header>
-  <h1>حوائط العروض المجانية</h1>
-</header>
+  <main class="container" id="login-box">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" id="username" placeholder="اسم المستخدم" />
+    <input type="password" id="password" placeholder="كلمة المرور" />
+    <button class="btn" onclick="login()">دخول</button>
+  </main>
 
-<div class="container" id="login">
-  <h2>تسجيل الدخول</h2>
-  <input type="text" id="username" placeholder="اسم المستخدم" />
-  <input type="password" id="password" placeholder="كلمة المرور" />
-  <button class="btn" onclick="login()">دخول</button>
-</div>
+  <main class="container offers" id="offers-box">
+    <h2>مرحباً بك!</h2>
 
-<div class="container offers" id="offers">
-  <h2>مرحباً بك!</h2>
+    <div class="offer">
+      <h3>تحميل تطبيق Quiz</h3>
+      <p>احصل على <span class="points">30 نقطة</span></p>
+      <a href="#" class="btn">ابدأ الآن</a>
+    </div>
 
-  <div class="offer">
-    <h3>تحميل تطبيق Quiz</h3>
-    <p>احصل على <span class="points">30 نقطة</span></p>
-    <a href="#" class="btn">ابدأ الآن</a>
-  </div>
+    <div class="offer">
+      <h3>أكمل استبيان CPXResearch</h3>
+      <p>اربح حتى <span class="points">100 نقطة</span></p>
+      <a href="https://cpx-research.com/" target="_blank" class="btn">الدخول</a>
+    </div>
 
-  <div class="offer">
-    <h3>أكمل استبيان CPXResearch</h3>
-    <p>اربح حتى <span class="points">100 نقطة</span></p>
-    <a href="https://cpx-research.com/" target="_blank" class="btn">الدخول</a>
-  </div>
+    <div class="offer">
+      <h3>سجّل في موقع Cashback</h3>
+      <p>واكسب <span class="points">50 نقطة</span></p>
+      <a href="#" class="btn">سجل الآن</a>
+    </div>
+  </main>
 
-  <div class="offer">
-    <h3>سجّل في موقع Cashback</h3>
-    <p>واكسب <span class="points">50 نقطة</span></p>
-    <a href="#" class="btn">سجل الآن</a>
-  </div>
-</div>
-
-<script>
-  function login() {
-    var user = document.getElementById("username").value;
-    var pass = document.getElementById("password").value;
-    if (user !== "" && pass !== "") {
-      document.getElementById("login").style.display = "none";
-      document.getElementById("offers").style.display = "block";
-    } else {
-      alert("يرجى إدخال اسم المستخدم وكلمة المرور.");
-    }
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
